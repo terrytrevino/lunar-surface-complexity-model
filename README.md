@@ -4,7 +4,8 @@ Public technical review site for the AIAA Space & Missiles Group Lunar Surface C
 
 ## What this repository contains
 
-- `index.html` — complete self-contained public review site: structure, styling, lunar SVG schematic, current v0.7 CLEAN model values, filtering, stress scenarios, and interaction logic
+- `index.html` — public review site: scientific dashboard, parameter/stress tools, and read-only workbook explorer
+- `workbook-data.json` — exported computed values plus formulas from the used ranges of all 14 v0.7 CLEAN worksheets
 - `README.md` — scope, disclaimer, and review notes
 
 ## Model scope
@@ -14,9 +15,15 @@ The site presents a working Lunar Surface implementation of the committee comple
 The full Excel workbook is maintained separately and is linked from the site through OneDrive so the web code remains easy to inspect and review.
 
 
+## Workbook data in the browser
+
+The public site now includes a **read-only workbook explorer**. Reviewers can browse every used worksheet range, search the current sheet, and toggle between computed values and formula text. The export currently represents all 14 worksheets, 4,206 used-range cells, and 289 formulas.
+
+The browser data is published in `workbook-data.json` so technical reviewers can inspect the raw exported values directly in the repository. It is a snapshot of v0.7 CLEAN and cannot write back to Excel.
+
 ## How the web model relates to the Excel workbook
 
-The GitHub Pages site is a browser-based **snapshot/front end** of the current v0.7 CLEAN workbook. The displayed complexity index, resource adequacy, stress ratio, seven complexity families, 28 Lunar Surface parameters, stress scenarios, and pilot-cohort information were carried from the Excel model into the HTML/JavaScript site.
+The GitHub Pages site is a browser-based **snapshot/front end** of the current v0.7 CLEAN workbook. In addition to the dashboard, the site now publishes the used-range cell values and formulas for every worksheet through the read-only workbook explorer.
 
 The website does **not** execute the Excel workbook in the browser and does not write changes back into it. The **Open Full Model Workbook** button opens the separately maintained OneDrive copy of the Excel model for reviewers who want to inspect the complete worksheets, formulas, retained source material, and supporting calculations.
 
