@@ -66,6 +66,28 @@ a{color:inherit}
 @media(max-width:900px){.workbook-summary{grid-template-columns:1fr;gap:30px}.workbook-map{grid-template-columns:1fr}.share-disclaimer{grid-template-columns:1fr}.share-disclaimer .disclaimer-version{white-space:normal}.nav-links{display:none}.hero{min-height:720px}.intro-grid,.boundaries,.source-grid{grid-template-columns:1fr;gap:32px}.kpi-grid{grid-template-columns:repeat(2,1fr)}.model-grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.flow-step:not(:last-child)::after{display:none}.file-grid{grid-template-columns:repeat(2,1fr)}.cohort-grid{grid-template-columns:1fr}.image-credit{justify-content:flex-start}.source-links a{grid-template-columns:90px 1fr}.source-links em{display:none}.footer-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.sheet-list li{grid-template-columns:1fr;gap:3px}.shell{width:min(100% - 24px,1180px)}.hero{min-height:760px}.hero-content{padding-top:90px}.hero h1{font-size:3.7rem}.hero-copy{font-size:1rem}.section{padding:68px 0}.kpi-grid,.file-grid,.boundary-grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.profile-row{grid-template-columns:105px 1fr 42px}.profile-label small{display:none}.section-heading{display:block}.status-chip,.panel-tag{display:inline-block;margin-top:12px}.cohort-card{grid-template-columns:1fr}.image-credit{bottom:14px;display:block}.image-credit a{display:block;margin-top:4px}}
 
+
+.workbook-explorer{border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden;box-shadow:0 10px 30px rgba(14,31,43,.06)}
+.workbook-explorer-head{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;padding:24px;border-bottom:1px solid var(--line);background:var(--paper)}
+.workbook-explorer-head h3{margin:0;color:var(--navy);font-size:1.15rem}
+.workbook-explorer-head p{margin:.35rem 0 0;color:var(--muted);font-size:.82rem}
+.workbook-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.workbook-controls select,.workbook-controls input{border:1px solid var(--line);border-radius:9px;background:#fff;padding:9px 11px;color:var(--ink);font:inherit;font-size:.82rem}
+.workbook-controls input{min-width:220px}
+.formula-toggle{display:flex;align-items:center;gap:7px;font-size:.8rem;color:var(--muted);white-space:nowrap}
+.workbook-sheet-meta{padding:12px 24px;border-bottom:1px solid var(--line);font-size:.77rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:18px}
+.workbook-table-wrap{overflow:auto;max-height:690px;background:#fff}
+.workbook-table{border-collapse:separate;border-spacing:0;min-width:100%;width:max-content;font-size:.72rem}
+.workbook-table th,.workbook-table td{border-right:1px solid #e8edf0;border-bottom:1px solid #e8edf0;padding:7px 9px;max-width:360px;min-width:92px;vertical-align:top;white-space:pre-wrap;overflow-wrap:anywhere;background:#fff}
+.workbook-table thead th{position:sticky;top:0;z-index:4;background:#eaf1f6;color:var(--navy);font-weight:850;text-align:center}
+.workbook-table .row-head{position:sticky;left:0;z-index:3;background:#f3f6f8;color:#667987;text-align:right;min-width:46px;width:46px;font-weight:750}
+.workbook-table thead .row-head{z-index:5;background:#dbe7ef}
+.workbook-table td.formula-cell{background:#f6fbff}
+.workbook-table td.match-cell{outline:2px solid var(--blue);outline-offset:-2px;background:#edf6fc}
+.workbook-raw-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.workbook-load-error{padding:28px;color:#8b2f2f;background:#fff6f6}
+@media(max-width:900px){.workbook-explorer-head{align-items:flex-start;flex-direction:column}.workbook-controls{width:100%}.workbook-controls input{min-width:0;flex:1}}
+
 </style>
 </head>
 <body>
@@ -201,7 +223,7 @@ a{color:inherit}
         <a href="#model">Model</a>
         <a href="#parameters">Parameters</a>
         <a href="#cohort">Pilot cohort</a>
-        <a href="https://1drv.ms/x/c/4d3f6d12963d4ae3/IQBBiSfjToqaQ6h4EyNOgDQuAdHC1hByUOz310E5lActm94?e=PoDQh3" target="_blank" rel="noopener noreferrer">Workbook</a>
+        <a href="#workbook-data">Workbook data</a>
         <a href="#files">Files</a>
       </div>
     </nav>
@@ -212,7 +234,8 @@ a{color:inherit}
       <p class="hero-copy">A transparent framework for comparing lunar surface architectures using peer-normalized complexity, traceable parameters, and a separate experimental resource-stress layer.</p>
       <div class="hero-actions">
         <a class="button primary" href="#model">View model</a>
-        <span class="button ghost disabled-file" title="File available separately from the project team">Open Full Model Workbook · available separately</span>
+        <a class="button ghost" href="https://1drv.ms/x/c/4d3f6d12963d4ae3/IQBBiSfjToqaQ6h4EyNOgDQuAdHC1hByUOz310E5lActm94?e=PoDQh3" target="_blank" rel="noopener noreferrer">Open Full Model Workbook</a>
+        <a class="button ghost" href="#workbook-data">Browse Excel Data</a>
         <a class="button ghost" href="#model-contents">Model Contents</a>
 <a class="button ghost" href="https://github.com/terrytrevino/lunar-surface-complexity-model" rel="noopener noreferrer" target="_blank">View Source Code</a>
       </div>
@@ -341,13 +364,48 @@ a{color:inherit}
     </section>
 
 
+
+    <section class="section shell" id="workbook-data" aria-labelledby="workbook-data-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">READ-ONLY EXCEL DATA</p>
+          <h2 id="workbook-data-title">Browse the workbook directly in the browser.</h2>
+          <p class="subhead">All 14 used worksheet ranges from v0.7 CLEAN are published here as a read-only snapshot. Switch sheets, search values, or toggle formula display. Nothing you do here can alter the Excel workbook.</p>
+        </div>
+        <span class="panel-tag">14 sheets · 4,206 used-range cells · 289 formulas</span>
+      </div>
+
+      <div class="workbook-explorer">
+        <div class="workbook-explorer-head">
+          <div>
+            <h3 id="wb-sheet-title">Workbook data</h3>
+            <p>Computed values are shown by default. “Show formulas” substitutes formula text wherever a formula exists.</p>
+          </div>
+          <div class="workbook-controls">
+            <select id="wb-sheet-select" aria-label="Workbook sheet"></select>
+            <input id="wb-search" type="search" placeholder="Search current sheet" aria-label="Search current sheet"/>
+            <label class="formula-toggle"><input id="wb-formulas" type="checkbox"/> Show formulas</label>
+          </div>
+        </div>
+        <div class="workbook-sheet-meta" id="wb-sheet-meta"></div>
+        <div class="workbook-table-wrap" id="wb-table-wrap">
+          <div style="padding:28px;color:var(--muted)">Loading workbook data…</div>
+        </div>
+      </div>
+
+      <div class="workbook-raw-links">
+        <a class="button primary" href="https://1drv.ms/x/c/4d3f6d12963d4ae3/IQBBiSfjToqaQ6h4EyNOgDQuAdHC1hByUOz310E5lActm94?e=PoDQh3" target="_blank" rel="noopener noreferrer">Open Native Excel Workbook</a>
+        <a class="button ghost" href="workbook-data.json" target="_blank" rel="noopener noreferrer">View Raw Workbook JSON</a>
+      </div>
+    </section>
+
     <section class="section shell" id="model-contents" aria-labelledby="model-contents-title">
       <div class="workbook-summary">
         <div>
           <span class="workbook-badge">Full workbook · 14 worksheets</span>
           <p class="eyebrow dark">MODEL CONTENTS</p>
           <h2 id="model-contents-title">What is behind the web page.</h2>
-          <p class="lede">The web page is the technical front end. The embedded v0.7 CLEAN Excel workbook is the complete working model, including the Lunar Surface scoring engine, parameter dictionary, pilot cohort, stress tests, model notes, and the retained Bearden-source calculation sheets.</p>
+          <p class="lede">The web page is the technical front end. It now includes a read-only export of the computed cell values and formulas from all 14 worksheets in the v0.7 CLEAN workbook. The original Excel workbook remains separately maintained in OneDrive for native Excel review.</p>
           <p><a class="button primary" href="https://1drv.ms/x/c/4d3f6d12963d4ae3/IQBBiSfjToqaQ6h4EyNOgDQuAdHC1hByUOz310E5lActm94?e=PoDQh3" target="_blank" rel="noopener noreferrer">Open workbook in OneDrive</a></p>
 <p class="note"><strong>For technical review:</strong> use <em>05 Lunar Surface Model</em> as the current Lunar Surface scoring engine. The earlier <em>01 Mission Model</em> is retained because the experimental Stress Test references it.</p>
         </div>
@@ -440,7 +498,7 @@ a{color:inherit}
   <footer class="footer">
     <div class="shell footer-grid">
       <div><strong>Lunar Surface Complexity Model</strong><p>AIAA Space &amp; Missiles Group working research testbed.</p></div>
-      <div><p>Core CI and model data shown here are read from the v0.7 CLEAN workbook packaged with this page.</p><p>NASA imagery is credited to NASA and used for contextual illustration only.</p></div>
+      <div><p>Core CI and the read-only worksheet data shown here were exported from the v0.7 CLEAN workbook. The native Excel workbook remains separately maintained.</p><p>NASA imagery is credited to NASA and used for contextual illustration only.</p></div>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
@@ -1027,5 +1085,105 @@ window.MODEL_DATA = {
 })();
 
 </script>
+
+<script>
+(() => {
+  const sheetSelect = document.querySelector('#wb-sheet-select');
+  const formulaToggle = document.querySelector('#wb-formulas');
+  const searchBox = document.querySelector('#wb-search');
+  const tableWrap = document.querySelector('#wb-table-wrap');
+  const sheetMeta = document.querySelector('#wb-sheet-meta');
+  const sheetTitle = document.querySelector('#wb-sheet-title');
+  if (!sheetSelect || !tableWrap) return;
+
+  let workbook = null;
+
+  const esc = (v) => String(v ?? '')
+    .replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
+    .replaceAll('"','&quot;').replaceAll("'","&#39;");
+
+  const colName = (n) => {
+    let s = '';
+    while (n > 0) {
+      n--;
+      s = String.fromCharCode(65 + (n % 26)) + s;
+      n = Math.floor(n / 26);
+    }
+    return s;
+  };
+
+  function renderWorkbookSheet() {
+    if (!workbook) return;
+    const sheet = workbook.sheets.find(s => s.name === sheetSelect.value) || workbook.sheets[0];
+    if (!sheet) return;
+
+    const showFormulas = formulaToggle.checked;
+    const q = searchBox.value.trim().toLowerCase();
+    sheetTitle.textContent = sheet.name;
+    sheetMeta.innerHTML =
+      '<span><strong>Used range:</strong> ' + esc(sheet.range) + '</span>' +
+      '<span><strong>Rows:</strong> ' + sheet.rows + '</span>' +
+      '<span><strong>Columns:</strong> ' + sheet.cols + '</span>' +
+      '<span><strong>Formulas:</strong> ' + Object.keys(sheet.formulas || {}).length + '</span>';
+
+    let head = '<thead><tr><th class="row-head"></th>';
+    for (let c=1; c<=sheet.cols; c++) head += '<th>' + colName(c) + '</th>';
+    head += '</tr></thead>';
+
+    let body = '<tbody>';
+    let visibleRows = 0;
+    (sheet.values || []).forEach((row, rIndex) => {
+      const rowNo = rIndex + 1;
+      let rowSearch = '';
+      for (let c=1; c<=sheet.cols; c++) {
+        const addr = colName(c) + rowNo;
+        const value = row?.[c-1];
+        const formula = (sheet.formulas || {})[addr];
+        rowSearch += ' ' + String(value ?? '') + ' ' + String(formula ?? '');
+      }
+      if (q && !rowSearch.toLowerCase().includes(q)) return;
+      visibleRows++;
+      body += '<tr><th class="row-head">' + rowNo + '</th>';
+      for (let c=1; c<=sheet.cols; c++) {
+        const addr = colName(c) + rowNo;
+        const value = row?.[c-1];
+        const formula = (sheet.formulas || {})[addr];
+        const shown = showFormulas && formula ? formula : value;
+        const match = q && (String(value ?? '') + ' ' + String(formula ?? '')).toLowerCase().includes(q);
+        body += '<td class="' + (formula ? 'formula-cell ' : '') + (match ? 'match-cell' : '') +
+          '" title="' + esc(addr + (formula ? ' · ' + formula : '')) + '">' + esc(shown ?? '') + '</td>';
+      }
+      body += '</tr>';
+    });
+    body += '</tbody>';
+
+    if (!visibleRows) {
+      tableWrap.innerHTML = '<div style="padding:28px;color:var(--muted)">No rows match this search.</div>';
+      return;
+    }
+    tableWrap.innerHTML = '<table class="workbook-table">' + head + body + '</table>';
+  }
+
+  fetch('workbook-data.json', {cache:'no-store'})
+    .then(r => { if (!r.ok) throw new Error('Workbook data file was not found.'); return r.json(); })
+    .then(data => {
+      workbook = data;
+      sheetSelect.innerHTML = data.sheets.map(s =>
+        '<option value="' + esc(s.name) + '">' + esc(s.name) + '</option>'
+      ).join('');
+      const preferred = data.sheets.find(s => s.name === '05 Lunar Surface Model');
+      if (preferred) sheetSelect.value = preferred.name;
+      renderWorkbookSheet();
+    })
+    .catch(err => {
+      tableWrap.innerHTML = '<div class="workbook-load-error"><strong>Workbook data did not load.</strong><br/>' + esc(err.message) + '</div>';
+    });
+
+  sheetSelect.addEventListener('change', () => { searchBox.value=''; renderWorkbookSheet(); });
+  formulaToggle.addEventListener('change', renderWorkbookSheet);
+  searchBox.addEventListener('input', renderWorkbookSheet);
+})();
+</script>
+
 </body>
 </html>
