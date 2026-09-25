@@ -13,6 +13,19 @@ The site presents a working Lunar Surface implementation of the committee comple
 
 The full Excel workbook is maintained separately and is linked from the site through OneDrive so the web code remains easy to inspect and review.
 
+
+## How the web model relates to the Excel workbook
+
+The GitHub Pages site is a browser-based **snapshot/front end** of the current v0.7 CLEAN workbook. The displayed complexity index, resource adequacy, stress ratio, seven complexity families, 28 Lunar Surface parameters, stress scenarios, and pilot-cohort information were carried from the Excel model into the HTML/JavaScript site.
+
+The website does **not** execute the Excel workbook in the browser and does not write changes back into it. The **Open Full Model Workbook** button opens the separately maintained OneDrive copy of the Excel model for reviewers who want to inspect the complete worksheets, formulas, retained source material, and supporting calculations.
+
+## Safe to explore
+
+Reviewers are encouraged to click, filter, switch stress cases, and otherwise explore the web interface. Those interactions happen locally in the browser and **cannot alter or break the Excel workbook, the GitHub repository, or the published source data**. Reloading the page restores the published state.
+
+Changes made directly to the Excel workbook are also separate from the website. They will not automatically change the GitHub Pages model until a new version is intentionally incorporated and published.
+
 ## Research status / disclaimer
 
 Working technical discussion draft for review and critique. This is not an AIAA standard, recommended practice, or official AIAA position, and it is not a NASA product or endorsement. The Lunar Surface parameter set and resource/stress overlays are working research constructs subject to revision, peer review, provenance checks, and calibration against real mission outcomes.
