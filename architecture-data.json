@@ -1,0 +1,851 @@
+{
+  "version": "0.8 research draft",
+  "date": "2026-11-13",
+  "upstream_commit": "0f11085fae6aa40040eabc9548de45c7c3a64e23",
+  "sources": [
+    {
+      "id": "C2004",
+      "title": "Human Lunar Exploration Mission Architectures",
+      "year": 2004,
+      "author": "John Connolly",
+      "kind": "Historical concept deck",
+      "url": "https://www.lpi.usra.edu/lunar_knowledge/connolly.pdf",
+      "local": "library/Connolly_2004.pdf",
+      "use": "Architecture interrelationships and transportation options",
+      "limit": "March 2004 cover date; not 2006. Original predecisional markings retained.",
+      "sha256": "3174387209c2912b7a961137bfc93de03e4c3c9367ebef835cd067090ebf4608",
+      "pages": 23,
+      "retrieved": "2026-11-13"
+    },
+    {
+      "id": "C2012",
+      "title": "Human Lunar Exploration Architectures",
+      "year": 2012,
+      "author": "John Connolly, NASA JSC",
+      "kind": "Historical concept deck",
+      "url": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf",
+      "local": "library/Connolly_2012.pdf",
+      "use": "Pages 17–20: campaign, inventory, 2 kW and 100 kWh per PUP, SEV storage",
+      "limit": "Four-person GER-derived scenario. Not an Artemis requirement. No unit masses supplied by the GER inventory.",
+      "sha256": "7bad15a3df0193f70b2d44f6e73ebb73b743f942a4fde19b8311d8a68d1fa946",
+      "pages": 24,
+      "retrieved": "2026-11-13"
+    },
+    {
+      "id": "C2019",
+      "title": "After LM: NASA Lunar Lander Concepts Beyond Apollo",
+      "year": 2019,
+      "author": "John F. Connolly, editor",
+      "kind": "Historical design catalog",
+      "url": "https://ntrs.nasa.gov/citations/20190031985",
+      "pdf": "https://ntrs.nasa.gov/api/citations/20190031985/downloads/20190031985_rev1.pdf",
+      "local": "library/After_LM_2019.pdf",
+      "use": "Illustrated lander design heritage and architecture alternatives",
+      "limit": "2019 publication, NASA/SP-2020-220338 report number; catalog concepts have their own historical dates.",
+      "sha256": "de6f8e8e15c96f6b929bbed952ae30427de9c2bb8e28267d6c70d6d30475a4e3",
+      "pages": 276,
+      "retrieved": "2026-11-13"
+    },
+    {
+      "id": "C2021",
+      "title": "NASA’s Initial and Sustained Artemis Human Landing Systems",
+      "year": 2021,
+      "author": "Polsgrove et al., including John Connolly",
+      "kind": "Historical HLS presentation",
+      "url": "https://ntrs.nasa.gov/citations/20210009615",
+      "pdf": "https://ntrs.nasa.gov/api/citations/20210009615/downloads/21%203%201%20Polsgrove%20IEEE_Updated_2.pdf",
+      "local": "library/HLS_2021.pdf",
+      "use": "Initial and sustained lander architecture illustrations",
+      "limit": "2021 snapshot, not current commitments. NASA flags third-party material on slide 5.",
+      "sha256": "a7d84e90a009f238d0d4f1511c45008523049de4f49d5769e3a811886297a3cc",
+      "pages": 18,
+      "retrieved": "2026-11-13"
+    },
+    {
+      "id": "G2023",
+      "title": "An Engineering Guide to Lunar Geotechnical Properties",
+      "year": 2023,
+      "author": "John Connolly and W. David Carrier",
+      "kind": "Engineering paper",
+      "url": "https://ntrs.nasa.gov/citations/20220014634",
+      "pdf": "https://ntrs.nasa.gov/api/citations/20220014634/downloads/Final%20IEEE%20paper%20formatted%20footnote%20added.pdf",
+      "local": "library/Connolly_Carrier_2023_Engineering_Guide.pdf",
+      "use": "PDF p2 equation 1: density versus depth; excavation, erosion, pad preparation",
+      "limit": "NTRS publication March 4, 2023, acquired 2022. Empirical model is not a site-specific south-pole survey.",
+      "sha256": "780965bd135f3f06994f2c7be7d09f03f8ad12fdaf04b84c2faff02061bdac93",
+      "pages": 8,
+      "retrieved": "2026-11-13"
+    },
+    {
+      "id": "L2023",
+      "title": "Updating Lunar Subsurface Geotechnical Properties Based Upon Nonlinear Winkler Modeling of Apollo and Lunokhod Measurements",
+      "year": 2023,
+      "author": "J. F. Connolly and W. D. Carrier",
+      "kind": "Conference abstract",
+      "url": "https://ntrs.nasa.gov/citations/20220018853",
+      "pdf": "https://ntrs.nasa.gov/api/citations/20220018853/downloads/LPSC%202023%20Abstract_Connolly_Carrier_v2.pdf",
+      "local": "library/Connolly_Carrier_2023_LPSC.pdf",
+      "use": "PDF pp1–2: nonlinear resistance exponent and depth-sensitive shear behavior",
+      "limit": "Updated model differs from linear descriptions in the engineering guide. No bearing-capacity certification or large-pad extrapolation.",
+      "sha256": "8fed5f0c72d12f39f6e1237ec03edc397c46ea2a553540736a58ebe7ea087617",
+      "pages": 2,
+      "retrieved": "2026-11-13"
+    },
+    {
+      "id": "P62",
+      "title": "Space 4 All lunar infrastructure v6.2 project baseline",
+      "year": 2026,
+      "author": "Space 4 All project",
+      "kind": "Project allocation",
+      "url": "https://github.com/terrytrevino/logic-lunar-infrastructure/blob/51b1fbf34766d45bd8a12a8888c90f2e77bc9c02/data/model_summary.json",
+      "use": "Six-person nominal 12.5 kW and survival operating modes",
+      "limit": "Project engineering allocation, not NASA requirement or Connolly four-person demand."
+    },
+    {
+      "id": "V2026",
+      "title": "VECTOR Merritt apparatus baseline",
+      "year": 2026,
+      "author": "VECTOR project",
+      "kind": "Project research baseline",
+      "url": "https://github.com/terrytrevino/EM-Field-Lab/blob/7693d102b67397d6d92f1184b907924941ae19b8/vector-discovery/merritt/BASELINE.md",
+      "use": "Lab coil geometry, measurement gaps and single-axis scope",
+      "limit": "No habitat-scale power allocation or established biological benefit. Turns and resistance require measurement."
+    }
+  ],
+  "inventory": [
+    {
+      "id": "PUP",
+      "name": "Portable Utility Pallet",
+      "quantity": 3,
+      "solar_nameplate_kw_per_unit": 2,
+      "battery_kwh_per_unit": 100,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "Transported by SEVs",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "PCT",
+      "name": "Portable Communications Terminal",
+      "quantity": 1,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": null,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "Transported by PUP; assumes at least one lunar relay satellite",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "R1",
+      "name": "Robotic Precursor 1",
+      "quantity": 1,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": null,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "Small international science rover",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "R2",
+      "name": "Robotic Precursor 2",
+      "quantity": 1,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": null,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "NASA robotic assistant and science rover",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "R3",
+      "name": "Robotic Precursor 3",
+      "quantity": 1,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": null,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "Small international science rover",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "UPR",
+      "name": "Unpressurized Rover",
+      "quantity": 1,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": null,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "Excursions before second SEV",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "OFF",
+      "name": "Off-loader",
+      "quantity": 1,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": null,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "LSMS or cradle; telerobotic offload or SEV-mounted use",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "SCI",
+      "name": "Science Package",
+      "quantity": 1,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": null,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "Predeployed in second mission",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "LOG",
+      "name": "Logistics payload",
+      "quantity": 9,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": null,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "Supports 28-day capability",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "STM",
+      "name": "Suitport Transfer Module",
+      "quantity": 1,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": null,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "Material transfer through suitport",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "SEV",
+      "name": "Space Exploration Vehicle",
+      "quantity": 2,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": 200,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "Mobile habitation; average travel speed 5 km/h",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    },
+    {
+      "id": "ALC",
+      "name": "Airlock Logistics Carrier",
+      "quantity": 7,
+      "solar_nameplate_kw_per_unit": null,
+      "battery_kwh_per_unit": null,
+      "unit_mass_kg": null,
+      "operating_demand_kw": null,
+      "notes": "Pressurized logistics",
+      "source": "https://www.lpi.usra.edu/meetings/leag2012/presentations/Connolly.pdf#page=20",
+      "status": "historical concept; not current requirements",
+      "source_id": "C2012",
+      "source_page": 20,
+      "power_peak_kw": null,
+      "deployment_hours": null,
+      "lander_id": null,
+      "volume_m3": null,
+      "phase": "Unallocated"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "survey",
+      "proposed_phase": 0,
+      "depends_on": [],
+      "gate": "Characterize terrain, illumination, dust and communications; robotic precursor phase",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    },
+    {
+      "id": "offload_ready",
+      "proposed_phase": 0,
+      "depends_on": [
+        "survey"
+      ],
+      "gate": "Resolve lander/offloader bootstrap, reach, support and independent startup power",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    },
+    {
+      "id": "power",
+      "proposed_phase": 1,
+      "depends_on": [
+        "offload_ready"
+      ],
+      "gate": "Deploy and verify generation, stationary storage, protection and cable routes",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    },
+    {
+      "id": "comms",
+      "proposed_phase": 1,
+      "depends_on": [
+        "power"
+      ],
+      "gate": "Verify relay availability, PCT links and autonomous contingency control",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    },
+    {
+      "id": "mobility",
+      "proposed_phase": 1,
+      "depends_on": [
+        "power",
+        "comms"
+      ],
+      "gate": "Commission offloader and mobility; reserve SEV energy for return and contingency",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    },
+    {
+      "id": "habitat",
+      "proposed_phase": 2,
+      "depends_on": [
+        "mobility"
+      ],
+      "gate": "Integrate habitat or mobile habitation, logistics, thermal and life support",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    },
+    {
+      "id": "vector_install",
+      "proposed_phase": 2,
+      "depends_on": [
+        "habitat"
+      ],
+      "gate": "Install coil support, driver, sensors, disconnect and harness; proposed VECTOR addition",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    },
+    {
+      "id": "vector_test",
+      "proposed_phase": 2,
+      "depends_on": [
+        "vector_install",
+        "power"
+      ],
+      "gate": "Calibrate 3D fields, measure RMS current and temperatures, test fault isolation",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    },
+    {
+      "id": "crew_gate",
+      "proposed_phase": 3,
+      "depends_on": [
+        "habitat",
+        "comms",
+        "power"
+      ],
+      "gate": "Verify survival energy, logistics and return capability independently of VECTOR",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    },
+    {
+      "id": "research",
+      "proposed_phase": 3,
+      "depends_on": [
+        "crew_gate",
+        "vector_test"
+      ],
+      "gate": "Controlled research operation after electrical, magnetic and experimental review",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    },
+    {
+      "id": "expansion",
+      "proposed_phase": 4,
+      "depends_on": [
+        "research"
+      ],
+      "gate": "Add distributed generation and spare capacity after measured demand and reliability review",
+      "status": "proposed implementation sequence; not a Connolly landing manifest",
+      "source_id": "DESIGN",
+      "duration_h": null
+    }
+  ],
+  "parameters": [
+    {
+      "family": "Structural",
+      "parameter": "Flight elements / major nodes",
+      "definition": "Count of independently deployed or operated surface/flight elements",
+      "unit": "count",
+      "direction": "Higher = more complex",
+      "owner": "Domain lead",
+      "provenance": "Observed or authoritative mission architecture",
+      "priority": "Core"
+    },
+    {
+      "family": "Structural",
+      "parameter": "External interfaces",
+      "definition": "Distinct hardware/software/operational interfaces crossing subsystem or organization boundaries",
+      "unit": "count",
+      "direction": "Higher = more complex",
+      "owner": "Systems integration",
+      "provenance": "Interface control / architecture source",
+      "priority": "Core"
+    },
+    {
+      "family": "Structural",
+      "parameter": "Subsystem interdependencies",
+      "definition": "Degree to which subsystem performance depends on other systems or shared services",
+      "unit": "ordinal 1–5",
+      "direction": "Higher = more complex",
+      "owner": "Systems integration",
+      "provenance": "Architecture + reviewer rationale",
+      "priority": "Core"
+    },
+    {
+      "family": "Structural",
+      "parameter": "Deployment / configuration events",
+      "definition": "Critical deployments, emplacement, assembly or reconfiguration events after launch",
+      "unit": "count",
+      "direction": "Higher = more complex",
+      "owner": "Mission design",
+      "provenance": "CONOPS / mission plan",
+      "priority": "Core"
+    },
+    {
+      "family": "Functional",
+      "parameter": "Mission operating modes",
+      "definition": "Distinct operational modes requiring different control logic or sequencing",
+      "unit": "count",
+      "direction": "Higher = more complex",
+      "owner": "Operations",
+      "provenance": "CONOPS / ops concept",
+      "priority": "Core"
+    },
+    {
+      "family": "Functional",
+      "parameter": "Autonomous functions",
+      "definition": "Functions executed without immediate human/ground intervention",
+      "unit": "count or ordinal",
+      "direction": "Higher = more complex",
+      "owner": "Autonomy",
+      "provenance": "Software/CONOPS source",
+      "priority": "Core"
+    },
+    {
+      "family": "Functional",
+      "parameter": "RPOD / docking / capture events",
+      "definition": "Rendezvous, proximity operations, docking, berthing or capture events",
+      "unit": "count",
+      "direction": "Higher = more complex",
+      "owner": "GNC",
+      "provenance": "Mission architecture",
+      "priority": "Conditional"
+    },
+    {
+      "family": "Functional",
+      "parameter": "Concurrent operations / coordination",
+      "definition": "Degree of simultaneous activities or distributed coordination required",
+      "unit": "ordinal 1–5",
+      "direction": "Higher = more complex",
+      "owner": "Operations",
+      "provenance": "CONOPS + rationale",
+      "priority": "Core"
+    },
+    {
+      "family": "Technology",
+      "parameter": "Critical-technology maturity gap",
+      "definition": "Gap between required capability and demonstrated maturity at program start",
+      "unit": "inverse TRL / ordinal",
+      "direction": "Lower maturity = more complex",
+      "owner": "Technology",
+      "provenance": "TRL evidence + date",
+      "priority": "Core"
+    },
+    {
+      "family": "Technology",
+      "parameter": "First-of-kind content",
+      "definition": "Fraction of mission-critical capability without direct flight/surface heritage",
+      "unit": "fraction 0–1",
+      "direction": "Higher = more complex",
+      "owner": "Technology",
+      "provenance": "Heritage mapping",
+      "priority": "Core"
+    },
+    {
+      "family": "Technology",
+      "parameter": "Heritage gap",
+      "definition": "Extent to which analogous systems have not operated in comparable environment/regime",
+      "unit": "ordinal 1–5",
+      "direction": "Less heritage = more complex",
+      "owner": "Domain lead",
+      "provenance": "Heritage source + rationale",
+      "priority": "Core"
+    },
+    {
+      "family": "Technology",
+      "parameter": "Software / autonomy novelty",
+      "definition": "Novelty of flight/surface software, autonomy, perception or decision architecture",
+      "unit": "ordinal 1–5",
+      "direction": "Higher = more complex",
+      "owner": "Software / autonomy",
+      "provenance": "Software architecture / heritage",
+      "priority": "Core"
+    },
+    {
+      "family": "Environment",
+      "parameter": "Thermal severity / cycling",
+      "definition": "Thermal range, gradients and cycling imposed on mission-critical hardware",
+      "unit": "°C range + ordinal",
+      "direction": "Higher = more complex",
+      "owner": "Thermal",
+      "provenance": "Environmental design source",
+      "priority": "Core"
+    },
+    {
+      "family": "Environment",
+      "parameter": "Radiation exposure",
+      "definition": "Radiation environment relative to component/system tolerance and mission duration",
+      "unit": "dose / ordinal",
+      "direction": "Higher = more complex",
+      "owner": "EEE / radiation",
+      "provenance": "Radiation environment source",
+      "priority": "Core"
+    },
+    {
+      "family": "Environment",
+      "parameter": "Dust / regolith exposure",
+      "definition": "Degree of regolith contact, plume transport, contamination and abrasive exposure",
+      "unit": "ordinal 1–5",
+      "direction": "Higher = more complex",
+      "owner": "Surface systems",
+      "provenance": "Mission location + exposure logic",
+      "priority": "Core"
+    },
+    {
+      "family": "Environment",
+      "parameter": "Illumination / darkness variability",
+      "definition": "Variability and duration of illumination interruption affecting thermal/power/ops",
+      "unit": "hours + ordinal",
+      "direction": "Higher variability = more complex",
+      "owner": "Power / mission design",
+      "provenance": "Illumination analysis",
+      "priority": "Core"
+    },
+    {
+      "family": "Performance",
+      "parameter": "Power demand / power density",
+      "definition": "Required electrical power and peak-to-average demand relative to architecture",
+      "unit": "kW / ratio",
+      "direction": "Higher = more complex",
+      "owner": "Power",
+      "provenance": "Power budget",
+      "priority": "Core"
+    },
+    {
+      "family": "Performance",
+      "parameter": "Navigation / positioning precision",
+      "definition": "Required absolute/relative localization and control precision",
+      "unit": "m or cm / ordinal",
+      "direction": "Tighter precision = more complex",
+      "owner": "GNC",
+      "provenance": "Requirement source",
+      "priority": "Core"
+    },
+    {
+      "family": "Performance",
+      "parameter": "Propulsion / mobility performance",
+      "definition": "Required delta-v, traverse range, grade, traction or payload mobility performance",
+      "unit": "mission-specific",
+      "direction": "Higher demand = more complex",
+      "owner": "Mobility / propulsion",
+      "provenance": "Mission requirement",
+      "priority": "Core"
+    },
+    {
+      "family": "Performance",
+      "parameter": "Communications / data burden",
+      "definition": "Communications availability, latency, data volume/rate and network dependence",
+      "unit": "Mbps/GB/day + ordinal",
+      "direction": "Higher = more complex",
+      "owner": "Comms",
+      "provenance": "Comms/data budget",
+      "priority": "Core"
+    },
+    {
+      "family": "Logistics",
+      "parameter": "Resupply dependency",
+      "definition": "Dependence on recurring external consumables, spares or replacement hardware",
+      "unit": "fraction / cadence",
+      "direction": "Higher dependency = more complex",
+      "owner": "Logistics",
+      "provenance": "Logistics model",
+      "priority": "Core"
+    },
+    {
+      "family": "Logistics",
+      "parameter": "Shared infrastructure dependency",
+      "definition": "Dependence on common power, comm, nav, thermal, mobility or servicing assets",
+      "unit": "count / ordinal",
+      "direction": "Higher = more complex",
+      "owner": "Infrastructure lead",
+      "provenance": "Architecture dependency map",
+      "priority": "Core"
+    },
+    {
+      "family": "Logistics",
+      "parameter": "Maintenance / servicing burden",
+      "definition": "Planned maintenance frequency, repair complexity and crew/robotic intervention",
+      "unit": "hours/month + ordinal",
+      "direction": "Higher = more complex",
+      "owner": "Maintainability",
+      "provenance": "Maintenance concept",
+      "priority": "Core"
+    },
+    {
+      "family": "Logistics",
+      "parameter": "Surface mobility / transport dependency",
+      "definition": "Reliance on mobility assets to connect distributed mission functions",
+      "unit": "distance/cadence + ordinal",
+      "direction": "Higher = more complex",
+      "owner": "Mobility / logistics",
+      "provenance": "CONOPS / site plan",
+      "priority": "Core"
+    },
+    {
+      "family": "Programmatic",
+      "parameter": "Organizations / external partners",
+      "definition": "Number of organizations with critical design, integration or operational responsibility",
+      "unit": "count",
+      "direction": "Higher = more complex",
+      "owner": "Program lead",
+      "provenance": "Org/interface map",
+      "priority": "Core"
+    },
+    {
+      "family": "Programmatic",
+      "parameter": "Schedule compression",
+      "definition": "Available development time relative to comparable mission complexity/heritage",
+      "unit": "months + normalized inverse margin",
+      "direction": "More compression = more complex",
+      "owner": "Schedule",
+      "provenance": "Approved baseline",
+      "priority": "Core"
+    },
+    {
+      "family": "Programmatic",
+      "parameter": "Integration & test novelty",
+      "definition": "Novelty and difficulty of verifying integrated surface behavior before flight",
+      "unit": "ordinal 1–5",
+      "direction": "Higher = more complex",
+      "owner": "I&T",
+      "provenance": "Verification plan",
+      "priority": "Core"
+    },
+    {
+      "family": "Programmatic",
+      "parameter": "Requirements volatility / change burden",
+      "definition": "Extent/frequency of material requirement changes after architecture baseline",
+      "unit": "count + ordinal",
+      "direction": "Higher = more complex",
+      "owner": "Systems engineering",
+      "provenance": "Change records / baseline history",
+      "priority": "Core"
+    }
+  ],
+  "crosswalk": [
+    {
+      "family": "Structural",
+      "existing_parameter": "Flight elements / major nodes",
+      "new_evidence": "29 manifest items across 12 types; carriers and crew excluded",
+      "interpretation_limit": "Do not equate logistics payloads with independent active systems"
+    },
+    {
+      "family": "Structural",
+      "existing_parameter": "External interfaces",
+      "new_evidence": "7 proposed boundary records in interfaces.csv",
+      "interpretation_limit": "Design scope only; not historical interface count"
+    },
+    {
+      "family": "Structural",
+      "existing_parameter": "Subsystem interdependencies",
+      "new_evidence": "Proposed directed buildout graph",
+      "interpretation_limit": "Ordinal rank requires reviewer rationale"
+    },
+    {
+      "family": "Structural",
+      "existing_parameter": "Deployment / configuration events",
+      "new_evidence": "11 proposed task gates",
+      "interpretation_limit": "Tasks are not discrete operation counts or NASA landing dates"
+    },
+    {
+      "family": "Performance",
+      "existing_parameter": "Power demand / power density",
+      "new_evidence": "6 kW historical generation compared with current project load modes",
+      "interpretation_limit": "Nameplate generation is not load demand"
+    },
+    {
+      "family": "Logistics",
+      "existing_parameter": "Resupply dependency",
+      "new_evidence": "9 logistics payloads and 7 ALC",
+      "interpretation_limit": "Contents, mass and cadence unresolved; possible packaging overlap"
+    },
+    {
+      "family": "Logistics",
+      "existing_parameter": "Surface mobility / transport dependency",
+      "new_evidence": "2 SEVs; PUP transported by SEV; PCT by PUP",
+      "interpretation_limit": "No route length, transport time or handling mass assumed"
+    },
+    {
+      "family": "Environment",
+      "existing_parameter": "Illumination / darkness variability",
+      "new_evidence": "User-specified outage duration and availability sensitivities",
+      "interpretation_limit": "No site illumination chronology verified"
+    },
+    {
+      "family": "Technology",
+      "existing_parameter": "Critical-technology maturity gap",
+      "new_evidence": "VECTOR habitat deployment remains proposed",
+      "interpretation_limit": "No TRL assigned from a historical concept drawing"
+    }
+  ],
+  "power_baseline": {
+    "version": "v6.2 WIP",
+    "model_status": "work in progress",
+    "source_workbook": "Space4All_Lunar_Surface_Power_Dashboard_v6_2_WIP.xlsx",
+    "export_date": "2026-10-20",
+    "crew_nominal": 6,
+    "crew_handover": 12,
+    "nominal_load_kw": 12.5,
+    "handover_load_kw": 17.5,
+    "crewed_survival_kw": 8.65,
+    "emergency_refuge_kw": 5.25,
+    "uncrewed_survival_kw": 2.4,
+    "deep_hibernation_kw": 1.1,
+    "utility_node_warm_core_kw": 0.75,
+    "battery_only_refuge_hours": 24,
+    "safe_haven_target_hours": 168,
+    "six_crew_installed_battery_kwh": 157.5,
+    "handover_installed_battery_kwh": 202.5,
+    "six_crew_full_critical_battery_kwh": 129.75,
+    "handover_full_critical_battery_kwh": 170.25,
+    "six_crew_required_surviving_generation_kw": 4.5,
+    "note": "Version 6.2 completes a public-source and terminology audit without changing model formulas or numerical baselines. Space 4 All engineering allocations remain work in progress; see the workbook and references register for provenance and caveats."
+  },
+  "historical_campaign": {
+    "crew": 4,
+    "large_cargo_landings": 4,
+    "small_cargo_landings": 6,
+    "crewed_missions": 5,
+    "initial_visit_days": 7,
+    "later_visit_days": 28,
+    "precursor_start": "HLR−5",
+    "source": "C2012 pp17–19"
+  },
+  "geotechnics": {
+    "density_equation": "rho=1.92*(z_cm+12.2)/(z_cm+18) g/cm3",
+    "source": "G2023 p2 eq1",
+    "nonlinear_winkler_exponent": 1.86,
+    "nonlinear_winkler_k": 163,
+    "nonlinear_winkler_k_units": "Pa/mm^1.86",
+    "winkler_source": "L2023 p1",
+    "scope": "Apollo/Lunokhod-based empirical reference; not a south-pole site characterization"
+  }
+}
