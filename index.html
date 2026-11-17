@@ -36,7 +36,7 @@ a{color:inherit}
 .nav-links{display:flex;gap:26px}.nav-links a{text-decoration:none;font-size:.9rem;color:rgba(255,255,255,.78)}.nav-links a:hover{color:#fff}
 .hero-content{position:relative;z-index:2;padding:118px 0 90px;max-width:1180px}.eyebrow{font-size:.74rem;letter-spacing:.16em;font-weight:800;text-transform:uppercase;color:#c9e6ff;margin:0 0 18px}.eyebrow.dark{color:var(--blue)}
 .hero h1{font-size:clamp(3.4rem,7vw,6.4rem);line-height:.88;letter-spacing:-.055em;margin:0 0 26px;max-width:800px}.hero-copy{max-width:720px;font-size:1.15rem;color:rgba(255,255,255,.82);margin:0 0 30px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.button{padding:13px 18px;border-radius:8px;font-weight:750;text-decoration:none;font-size:.92rem;border:1px solid transparent}.button.primary{background:#fff;color:var(--navy)}.disabled-file{cursor:default;opacity:.68;pointer-events:none}
+.hero-version-note{max-width:760px;margin:16px 0 0;font-size:.85rem;line-height:1.6;color:#d7e6f2}.hero-version-note code{font-size:inherit;color:inherit;overflow-wrap:anywhere}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.button{padding:13px 18px;border-radius:8px;font-weight:750;text-decoration:none;font-size:.92rem;border:1px solid transparent}.button.primary{background:#fff;color:var(--navy)}.disabled-file{cursor:default;opacity:.68;pointer-events:none}
 .button.ghost{border-color:rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.06)}
 .hero-meta{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:46px;color:rgba(255,255,255,.64);font-size:.8rem}.hero-meta span{position:relative}.hero-meta span:not(:last-child)::after{content:"";position:absolute;right:-11px;top:.45em;width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.35)}
 .image-credit{position:absolute;z-index:2;left:50%;bottom:22px;transform:translateX(-50%);display:flex;justify-content:flex-end;gap:16px;font-size:.72rem;color:rgba(255,255,255,.62)}.image-credit a{color:#fff;text-decoration:none}
@@ -233,12 +233,13 @@ a{color:inherit}
       <h1>Lunar Surface<br/>Complexity Model</h1>
       <p class="hero-copy">A transparent framework for comparing lunar surface architectures using peer-normalized complexity, traceable parameters, and a separate experimental resource-stress layer.</p>
       <div class="hero-actions">
-        <a class="button primary" href="architecture.html">Open v0.8 architecture workspace</a>
-        <a class="button ghost" href="https://1drv.ms/x/c/4d3f6d12963d4ae3/IQBBiSfjToqaQ6h4EyNOgDQuAdHC1hByUOz310E5lActm94?e=PoDQh3" target="_blank" rel="noopener noreferrer">Open Full Model Workbook</a>
-        <a class="button ghost" href="#workbook-data">Browse Excel Data</a>
+        <a class="button primary" href="architecture.html">Open architecture workspace (web v0.8)</a>
+        <a class="button ghost" href="https://1drv.ms/x/c/4d3f6d12963d4ae3/IQBBiSfjToqaQ6h4EyNOgDQuAdHC1hByUOz310E5lActm94?e=PoDQh3" target="_blank" rel="noopener noreferrer">Open Excel workbook (v0.7 CLEAN)</a>
+        <a class="button ghost" href="#workbook-data">Browse Excel data (v0.7 CLEAN)</a>
         <a class="button ghost" href="#model-contents">Model Contents</a>
 <a class="button ghost" href="https://github.com/terrytrevino/lunar-surface-complexity-model" rel="noopener noreferrer" target="_blank">View Source Code</a>
       </div>
+      <p class="hero-version-note"><strong>Web workspace: v0.8.</strong> The separately maintained Excel file is <code>AIAA_Lunar_Surface_Complexity_Model_v0.7_CLEAN.xlsx</code>. The v0.8 architecture scenarios are available in the web workspace and have not been incorporated into this Excel workbook.</p>
       <div class="hero-meta" aria-label="Model metadata">
         <span>v0.8 research draft · v0.7 workbook retained</span><span>28 parameters</span><span>Lunar south-polar surface</span><span>Working model · not a validated predictor</span>
       </div>
@@ -394,7 +395,7 @@ a{color:inherit}
       </div>
 
       <div class="workbook-raw-links">
-        <a class="button primary" href="https://1drv.ms/x/c/4d3f6d12963d4ae3/IQBBiSfjToqaQ6h4EyNOgDQuAdHC1hByUOz310E5lActm94?e=PoDQh3" target="_blank" rel="noopener noreferrer">Open Native Excel Workbook</a>
+        <a class="button primary" href="https://1drv.ms/x/c/4d3f6d12963d4ae3/IQBBiSfjToqaQ6h4EyNOgDQuAdHC1hByUOz310E5lActm94?e=PoDQh3" target="_blank" rel="noopener noreferrer">Open Excel workbook (v0.7 CLEAN)</a>
         <a class="button ghost" href="workbook-data.json" target="_blank" rel="noopener noreferrer">View Raw Workbook JSON</a>
       </div>
     </section>
@@ -402,11 +403,11 @@ a{color:inherit}
     <section class="section shell" id="model-contents" aria-labelledby="model-contents-title">
       <div class="workbook-summary">
         <div>
-          <span class="workbook-badge">Full workbook · 14 worksheets</span>
+          <span class="workbook-badge">Excel workbook v0.7 CLEAN · 14 worksheets</span>
           <p class="eyebrow dark">MODEL CONTENTS</p>
           <h2 id="model-contents-title">What is behind the web page.</h2>
-          <p class="lede">The web page is the technical front end. It now includes a read-only export of the computed cell values and formulas from all 14 worksheets in the v0.7 CLEAN workbook. The original Excel workbook remains separately maintained in OneDrive for native Excel review.</p>
-          <p><a class="button primary" href="https://1drv.ms/x/c/4d3f6d12963d4ae3/IQBBiSfjToqaQ6h4EyNOgDQuAdHC1hByUOz310E5lActm94?e=PoDQh3" target="_blank" rel="noopener noreferrer">Open workbook in OneDrive</a></p>
+          <p class="lede">The web page is the technical front end. It now includes a read-only export of the computed cell values and formulas from all 14 worksheets in the v0.7 CLEAN workbook. The native Excel file, AIAA_Lunar_Surface_Complexity_Model_v0.7_CLEAN.xlsx, remains separately maintained in OneDrive. The v0.8 architecture workspace is a separate web model.</p>
+          <p><a class="button primary" href="https://1drv.ms/x/c/4d3f6d12963d4ae3/IQBBiSfjToqaQ6h4EyNOgDQuAdHC1hByUOz310E5lActm94?e=PoDQh3" target="_blank" rel="noopener noreferrer">Open Excel workbook (v0.7 CLEAN) in OneDrive</a></p>
 <p class="note"><strong>For technical review:</strong> use <em>05 Lunar Surface Model</em> as the current Lunar Surface scoring engine. The earlier <em>01 Mission Model</em> is retained because the experimental Stress Test references it.</p>
         </div>
 
