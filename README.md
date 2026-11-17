@@ -2,6 +2,10 @@
 
 The architecture workspace adds traceable Connolly source material and editable surface-planning calculations to the existing complexity testbed. Open **architecture.html** for the new working model, or **index.html** for the model home and preserved v0.7 workbook explorer. Both work locally without a build step.
 
+## Web and Excel versions
+
+The **web architecture workspace is v0.8**. The **native Excel workbook remains v0.7 CLEAN**, with the verified OneDrive filename `AIAA_Lunar_Surface_Complexity_Model_v0.7_CLEAN.xlsx`. These are separately maintained models. The v0.8 architecture scenarios have not been incorporated into the native Excel workbook. Homepage buttons identify each version explicitly; the browser workbook explorer remains the v0.7 snapshot.
+
 ## Source library
 
 The local package includes six complete original PDFs totaling 351 pages: the 2004 and 2012 architecture decks, the 2019 After LM catalog, the 2021 HLS deck, and two 2023 Connolly and Carrier geotechnical publications. The searchable library records source URLs, publication dates, interpretation limits, page counts and SHA-256 hashes. Original NASA and third-party credits remain in the PDFs. The hosted review uses original-source links; offline PDF links appear when opened as a local file.
